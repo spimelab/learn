@@ -129,3 +129,59 @@ line.selected {
 rect {
  fill: white;
 }
+
+  .header {
+    overflow: hidden;
+    background-color: white;
+    padding: 20px 10px;
+  }
+  .header a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .header-center  {
+    float: center ;
+    text-align: center;
+  }
+  section {
+    background : white;
+    display : flex;
+    flex-direction : row;
+    height:100%;
+  }
+  section.mdp_tables {
+    background : white;
+     display : flex;
+    flex-direction : row;
+    height:100%;
+  }
+  footer {
+    background : black;
+    color : white;
+  }
+  div {
+    background : white;
+    margin : auto;
+    height:100%;
+  }
+  div.step_div {
+    background : white;
+    margin : auto;
+    height:100%;
+  }
+  div.params {
+    display : flex; 
+    flex-direction : column;
+    height:100%;
+  }
+
