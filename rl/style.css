@@ -1,0 +1,131 @@
+svg text {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+svg text::selection {
+    background: none;
+}
+input {
+        border: 1px dotted #ccc; 
+        background: white; 
+        font: 15px sans-serif;
+        padding: 10px 20px; 
+        font-size: 18px; 
+        margin: 20px 10px 20px 0; 
+        color: red;}
+        input:focus { background-color:yellow; outline: none;
+      }
+
+button {
+        background: grey;
+        border-radius: 3px;
+        border: 1px dotted #ccc; 
+        color: white;
+        font: 15px sans-serif;
+        font-size: 18px; 
+        margin: 20px 10px 20px 0; 
+        padding: 10px 20px; 
+        cursor: pointer;        
+      }
+select {
+        background: grey;
+        border-radius: 3px;
+        border: 1px dotted #ccc; 
+        color: white;
+        font: 15px sans-serif;
+        font-size: 18px; 
+        margin: 20px 10px 20px 0; 
+        padding: 10px 20px; 
+        cursor: pointer;        
+      }
+
+
+img {
+  width: 56px;
+  height: 48px;
+}
+
+h1 {
+  font-weight: 200;
+  font-style: 26px;
+  margin: 10px;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: #f5f5f5;}
+
+th {
+  background-color: #4CAF50;
+  color: rgb(122, 122, 122);
+}
+
+th_q {
+  background-color: #4CAF50;
+  color: rgb(122, 122, 122);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+marker#child {
+  fill: red;
+}
+
+g.node circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+g.node.selected circle {
+  fill: red;
+  stroke-width: 1.5px;
+}
+
+g.node.selected_target circle {
+  fill: pink;
+  stroke-width: 1.5px;
+}
+
+g.node text, g.node a {
+  pointer-events: none;
+  font: 15px sans-serif;
+}
+
+.aEnd,
+.zEnd {
+  fill: #444;
+  font-family: sans-serif;
+  font-size: 12pt;
+}
+
+line.link {
+  stroke: #999;
+  stroke-opacity: .4;
+  stroke-width: 4px;
+}
+
+line.new_line {
+  stroke: yellow;
+  stroke-opacity: .8;
+  stroke-width: 6px;
+}
+
+line.selected {
+  stroke: red;
+  stroke-opacity: 1;
+}
+
+rect {
+ fill: white;
+}
