@@ -95,7 +95,7 @@ function prep_svg(){
       step_log = false;
   }
 }
-
+console.log("loading script.js")
 var width = 1200,
     height = 700,
      border=1,
@@ -131,7 +131,7 @@ d3.select(window)
 	.on("mouseup", mouseup)
 	.on("keydown", keydown)
 	.on("keyup", keyup);
-
+console.log("window selected and mouse events registered")
 var svg = d3.select("#mdp_graph")
     .append("svg")
     .attr("width", width)
@@ -690,7 +690,7 @@ var models_dropdown = d3.select("#example_models")
 // var models_dropdown = d3.select("#model_selection")
 //                     .insert("select", "svg")
 //                     .on("change",model_selection);
- 
+console.log("populating dropdown models") 
 models_dropdown.selectAll("option")
               .data(["Create New", "4 States", "5 States", "7 States","8 States", "8 States+"])
               .enter().append("option")
