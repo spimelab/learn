@@ -869,11 +869,13 @@ function render_Q_table(Q) {
 
 }
 
+/*
 function download(content, fileName, contentType) {
    const a = document.createElement("a");
    const file = new Blob([content], { type: contentType });
    a.href = URL.createObjectURL(file);
-   a.download = fileName;
+   a.
+   = fileName;
    a.click();
 }
 
@@ -881,3 +883,4 @@ d3.select("#download-button")
     .on("click", function(){
       download(JSON.stringify([nodes, links]), "data.json", "text/plain");
     });
+*/
