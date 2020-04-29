@@ -136,7 +136,7 @@ var svg = d3.select("#mdp_graph")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-
+console.log("svg created")
 var force = d3.layout.force()
     .charge(-2000)
     .linkDistance(link_distance)
@@ -157,10 +157,11 @@ d3.select("#play-button")
     .on("click", runQAlgo);
 	
 function runQAlgo() {
+  console.log("run")
   var states = nodes.map(function (node) { return node.name});
-	var available_actions = links.map(function (l) {return l.name})
+  var available_actions = links.map(function (l) {return l.name})
   
-	Q = initQ();
+  Q = initQ();
   R = rewards();
 	for(i = 0 ; i < iterations ; i++){
 		current_state = _.sample(states, 1);
@@ -223,6 +224,7 @@ var stepR;
 var step=0;
 d3.select("#step-button")
     .on("click", function(){
+      console.log("step")
       runQAlgo_Onestep();
     });
 
@@ -377,11 +379,12 @@ force = force
   .nodes(nodes)
   .links(links);
   force.start();
-
+console.log("force simulation stated")
 
 
 // var size_updated = false;
 function update() {
+  console.log("update")	
   var node = circlesg.selectAll(".node")
     .data(nodes, function(d) {return d.name;})
     .classed("selected", function(d) { return d === selected_node; })
@@ -425,7 +428,7 @@ function update() {
 	
   node.exit().remove();
   
-	var link = linesg.selectAll("line.link")
+      var link = linesg.selectAll("line.link")
       .data(links)
       .attr("x1", function(d) { return d.source.x; })
       .attr("y1", function(d) { return d.source.y; })
@@ -433,7 +436,7 @@ function update() {
       .attr("y2", function(d) { return d.target.y; })
       .classed("selected", function(d) { return d === selected_link; });
   
-	var linkg = link.enter()
+     var linkg = link.enter()
     .append("line")
     .style("stroke", function(l, i){
        if (l.is_active)
@@ -462,7 +465,7 @@ function update() {
 		.style("pointer-events", "none");
 	
 
-	var edgelabels = circles_labels_g.selectAll(".edgelabel")
+    var edgelabels = circles_labels_g.selectAll(".edgelabel")
         .data(links)
         .enter()
         .append('text')
@@ -841,7 +844,7 @@ function render_Q_table(Q) {
 	  .selectAll('th')
 	  .data(columns).enter()
 	  .append('th')
-    .attr("style", "background-color: lightcoral")
+          .attr("style", "background-color: lightcoral")
 	  .text(function (column) { return column; });
 
 	// create a row for each object in the data
